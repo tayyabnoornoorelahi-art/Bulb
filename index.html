@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bulb</title>
+     <link rel="icon" type="image/png" href="download.jpg">
+     <style>
+        body{
+     background-color: black;
+}
+.center{
+     width: 25%;
+     height: 40%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+.btn{
+     padding: 15px;
+     background-color: blueviolet;
+     border-radius: 20px;
+}
+     </style>
+</head>
+<body>
+     <img  id="bulb" class="center" src="Off bulb.jpg" alt=""/>
+     <button id="toggleBtn" class="center btn">Turn On</button>
+
+     <script>
+        let btn = document.getElementById("toggleBtn");
+
+let bulb = document.getElementById("bulb");
+
+btn.addEventListener("click", toggleBulb);
+
+function toggleBulb(e) {
+     if (btn.textContent. includes("On")) {
+          bulb.src = "On bulb.jpg";
+          btn.textContent = "Turn Off";
+          console.log("bulb chla")
+     }else {
+          bulb.src = "Off bulb.jpg";
+          btn.textContent = "Turn On";
+          console.log("dubara chla mein kaam kar raha hon")
+     }
+}
+     </script>
+     
+</body>
+</html>
